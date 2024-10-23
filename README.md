@@ -24,7 +24,7 @@ Before running the script, make sure you have the following installed:
 ### Step 1: Clone the Repository
 To download this script, clone the repository using:
 ```bash
-git clone https://github.com/yourusername/270towin-simulation-automation.git
+git clone https://github.com/thejessicafelts/270towin-simulation-automation.git
 cd 270towin-simulation-automation
 ```
 
