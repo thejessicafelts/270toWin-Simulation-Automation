@@ -120,11 +120,3 @@ Harris: 269, Trump: 269
 ## Contributing
 
 Feel free to submit issues or pull requests if you'd like to contribute to improving the script. Make sure to follow proper coding standards and provide thorough explanations for any changes made.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
-
----
-
-By following this `README.md`, users should be able to set up and run the script easily on both Mac and Windows systems. Make sure to replace placeholder paths, repository names, and URLs where needed.
