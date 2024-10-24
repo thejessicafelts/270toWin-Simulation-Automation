@@ -8,14 +8,54 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <section id="banner">
+        <div class="banner-inner">
+            Banner information
+        </div>
+    </section>
     <header>
-        <h1>270 to Win Simulation Application</h1>
+        <div class="header-inner">
+            <h1>270 to Win Simulation Results</h1>
+        </div>
     </header>
     <main>
-        Updated Results
+        <table class="">
+            <thead>
+                <tr class="top-row">
+                    <th class="none" colspan="2"></th>
+                    <th class="center harris-heading" colspan="2">Kamala Harris</th>
+                    <th class="center trump-heading" colspan="2">Donald Trump</th>
+                    <th class="center tie-heading" colspan="2">Ties</th>
+                </tr>
+                <tr class="bottom-row">
+                    <th id="col-date" class="none" class="left">Date</th>
+                    <th id="col-simulations" class="none" class="center">Simulations</th>
+                    <th id="col-dem-wins" class="harris-heading" class="center">Wins</th>
+                    <th id="col-dem-percent" class="harris-heading" class="center">%</th>
+                    <th id="col-rep-wins" class="trump-heading" class="center">Wins</th>
+                    <th id="col-rep-percent" class="trump-heading" class="center">%</th>
+                    <th id="col-tie-totals" class="tie-heading" class="center">Ties</th>
+                    <th id="col-tie-percent" class="tie-heading" class="center">%</th>
+                </tr>
+            </thead>
+            <tbody id="simulation-results">
+                <tr class="rep-win">
+                    <td class="left">October 23, 2024</td>
+                    <td class="center">10</td>
+                    <td class="center">4</td>
+                    <td class="center">40.0%</td>
+                    <td class="center rep-win">6</td>
+                    <td class="center rep-win">60.0%</td>
+                    <td class="center">0</td>
+                    <td class="center">0.0%</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
     <footer>
-        Made with &hearts; by <a href="https://www.github.com/thejessicafelts">thejessicafelts</a>. &copy; 2024.
+        <div class="footer-inner">
+            <p>Copyright &copy; 2024 &ndash; Jessica Felts</p>
+        </div>
     </footer>
 </body>
 </html>
