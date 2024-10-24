@@ -17,18 +17,30 @@ main, .banner-inner, .header-inner, .footer-inner {
 #banner {
     background: rgba(25,25,25,1);
     color: white;
-    padding: 10px 0;
+    padding: 15px 0;
+}
+
+#banner .banner-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#banner span a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
 }
 
 header, footer {
     background: rgba(50,50,50,1);
     color: white;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
 }
 
 main {
-    min-height: calc(100vh - 173px);
+    min-height: calc(100vh - 223px);
     padding: 50px 0;
 }
 
