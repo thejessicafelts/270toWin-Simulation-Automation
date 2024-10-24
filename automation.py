@@ -14,7 +14,7 @@ wins_harris = 0
 wins_trump = 0
 wins_tied = 0
 wait_time = 6
-simulation_count = 1000
+simulation_count = 100
 
 # Initialize the WebDriver (Chrome)
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
