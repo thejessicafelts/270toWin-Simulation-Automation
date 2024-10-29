@@ -350,7 +350,8 @@ pre {
 
 #readme p code,
 #readme strong code,
-#readme ul code {
+#readme ul code,
+#code-tab p.tab-description code {
     background: #444;
     color: #fff;
     border-radius: 5px;
