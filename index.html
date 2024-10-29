@@ -22,74 +22,196 @@
             <h1>270 to Win Simulation Results</h1>
         </div>
     </header>
+    
+    <!-- Tab Navigation -->
+    <div class="tab-container">
+        <button class="tab-button active" data-tab="about-tab">About This Project</button>
+        <button class="tab-button" data-tab="results-tab">Simulation Results</button>
+    </div>
+
+    <!-- Tab Content -->
     <main>
-        <table class="">
-            <thead>
-                <tr class="top-row">
-                    <th class="none" colspan="2"></th>
-                    <th class="center harris-heading" colspan="2">Kamala Harris</th>
-                    <th class="center trump-heading" colspan="2">Donald Trump</th>
-                    <th class="center tie-heading" colspan="2">Ties</th>
-                </tr>
-                <tr class="bottom-row">
-                    <th id="col-date" class="none" class="left">Date</th>
-                    <th id="col-simulations" class="none" class="center">Simulations</th>
-                    <th id="col-dem-wins" class="harris-heading" class="center">Wins</th>
-                    <th id="col-dem-percent" class="harris-heading" class="center">%</th>
-                    <th id="col-rep-wins" class="trump-heading" class="center">Wins</th>
-                    <th id="col-rep-percent" class="trump-heading" class="center">%</th>
-                    <th id="col-tie-totals" class="tie-heading" class="center">Ties</th>
-                    <th id="col-tie-percent" class="tie-heading" class="center">%</th>
-                </tr>
-            </thead>
-            <tbody id="simulation-results">
-                <tr class="dem-win">
-                    <td class="left">October 24, 2024</td>
-                    <td class="center">100</td>
-                    <td class="center dem-win">51</td>
-                    <td class="center dem-win">51.0%</td>
-                    <td class="center">49</td>
-                    <td class="center">49.0%</td>
-                    <td class="center">0</td>
-                    <td class="center">0.0%</td>
-                </tr>
-                <tr class="rep-win">
-                    <td class="left">October 24, 2024</td>
-                    <td class="center">100</td>
-                    <td class="center">48</td>
-                    <td class="center">48.0%</td>
-                    <td class="center rep-win">52</td>
-                    <td class="center rep-win">52.0%</td>
-                    <td class="center">0</td>
-                    <td class="center">0.0%</td>
-                </tr>
-                <tr class="rep-win">
-                    <td class="left">October 24, 2024</td>
-                    <td class="center">100</td>
-                    <td class="center">46</td>
-                    <td class="center">46.0%</td>
-                    <td class="center rep-win">54</td>
-                    <td class="center rep-win">54.0%</td>
-                    <td class="center">0</td>
-                    <td class="center">0.0%</td>
-                </tr>
-                <tr class="rep-win">
-                    <td class="left">October 23, 2024</td>
-                    <td class="center">10</td>
-                    <td class="center">4</td>
-                    <td class="center">40.0%</td>
-                    <td class="center rep-win">6</td>
-                    <td class="center rep-win">60.0%</td>
-                    <td class="center">0</td>
-                    <td class="center">0.0%</td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- About This Project Tab -->
+        <section id="about-tab" class="tab-content active">
+            <section id="readme">
+                <h1>270toWin Election Simulation Automation</h1>
+                <p>This Python script automates running simulations on the <a href="https://www.270towin.com/2024-simulation/" target="_blank">270toWin 2024 Election Simulation</a> website. It sets the simulation speed, runs the simulation a specified number of times, and tracks the results for each run. Throughout the process, it prints out information on which candidate won each simulation.</p>
+            
+                <h2>Features</h2>
+                <ul>
+                    <li>Automatically set the simulation speed on the 270toWin website.</li>
+                    <li>Run the simulation a specified number of times.</li>
+                    <li>Track how many times each candidate wins or ties during the simulation.</li>
+                    <li>Print results for each simulation run, including which candidate won and the running percentage of wins.</li>
+                </ul>
+            
+                <h2>Prerequisites</h2>
+                <p>Before running the script, make sure you have the following installed:</p>
+                <ul>
+                    <li><strong>Python 3.7 or higher</strong>: Download from <a href="https://www.python.org/downloads/" target="_blank">python.org</a>.</li>
+                    <li><strong>Google Chrome</strong>: The script uses the Chrome browser to run the automation.</li>
+                    <li><strong>ChromeDriver</strong>: Managed automatically by <code>webdriver-manager</code>.</li>
+                    <li><strong>Selenium</strong>: To install Selenium, run:</li>
+                </ul>
+                <pre><code>pip install selenium webdriver-manager</code></pre>
+            
+                <h2>Setup Instructions</h2>
+            
+                <h3>Step 1: Clone the Repository</h3>
+                <p>To download this script, clone the repository using:</p>
+                <pre><code>git clone https://github.com/thejessicafelts/270towin-simulation-automation.git 
+cd 270towin-simulation-automation</code></pre>
+            
+                <h3>Step 2: Install Required Packages</h3>
+                <p>Make sure you have <code>selenium</code> and <code>webdriver-manager</code> installed:</p>
+                <pre><code>pip install selenium webdriver-manager</code></pre>
+            
+                <h3>Step 3: Preventing Your Computer from Sleeping During the Simulation</h3>
+                <p><strong>For Mac Users</strong>: Use the <code>caffeinate</code> command to prevent your Mac from going to sleep while the script runs:</p>
+                <pre><code>caffeinate -i python3 script_name.py</code></pre>
+                <p>Replace <code>script_name.py</code> with the actual name of your Python script. The <code>-i</code> option ensures your Mac stays awake as long as the script is running.</p>
+                <p><strong>For Windows Users</strong>: Adjust your power settings to prevent the computer from sleeping:</p>
+                <ol>
+                    <li>Go to <strong>Settings &gt; System &gt; Power &amp; Sleep</strong>.</li>
+                    <li>Under <strong>Sleep</strong>, set <strong>"When plugged in, PC goes to sleep after"</strong> to <strong>"Never."</strong></li>
+                </ol>
+            
+                <h2>Running the Script</h2>
+            
+                <h3>Step 1: Modify Configuration (Optional)</h3>
+                <p>Edit the following variables in the script if you need to adjust the settings:</p>
+                <ul>
+                    <li><strong><code>url</code></strong>: The URL of the 270toWin simulation page (default is set correctly).</li>
+                    <li><strong><code>sim_speed_id</code></strong>: The ID for the simulation speed button (default: <code>sim_speed_4</code>).</li>
+                    <li><strong><code>simulation_count</code></strong>: Number of times to run the simulation (default: <code>1000</code>).</li>
+                    <li><strong><code>wait_time</code></strong>: Time to wait (in seconds) between simulations (default: <code>6</code>).</li>
+                </ul>
+            
+                <h3>Step 2: Run the Script</h3>
+                <p>Execute the script using:</p>
+                <p><strong>Mac</strong>:</p>
+                <pre><code>caffeinate -i python3 script_name.py</code></pre>
+                <p><strong>Windows</strong>:</p>
+                <pre><code>python script_name.py</code></pre>
+            
+                <h3>Example Output</h3>
+                <pre><code>--------------------------------------------------------------------------------
+Simulation 1: Harris Wins.
+----------
+Harris: 320, Trump: 218
+Harris has won 100.00% of simulations. (1 out of 1)
+--------------------------------------------------------------------------------
+Simulation 2: Trump Wins.
+----------
+Harris: 249, Trump: 289
+Trump has won 50.00% of simulations. (1 out of 2)
+--------------------------------------------------------------------------------
+Simulation 3: Harris and Trump have Tied.
+----------
+Harris: 269, Trump: 269
+50.00% of Simulations (1 of 3) have resulted in a Tie.
+--------------------------------------------------------------------------------</code></pre>
+    
+                <h2>Code Walkthrough</h2>
+                <ol>
+                    <li><strong>Initialization</strong>: The script sets up the WebDriver using ChromeDriver and <code>webdriver-manager</code>. The simulation speed is set by finding and clicking the appropriate button on the website.</li>
+                    <li><strong>Simulation Loop</strong>: The script runs the simulation the specified number of times. After each simulation run, it waits for the results to appear and retrieves them using the designated HTML element IDs.</li>
+                    <li><strong>Result Calculation &amp; Display</strong>: The script calculates and prints the win percentage for Harris and Trump, as well as the number of ties, after each simulation run.</li>
+                </ol>
+            
+                <h2>Future Enhancements</h2>
+                <ul>
+                    <li><strong>Final Summary</strong>: Add a final summary that prints the overall win percentages for Harris, Trump, and ties at the end of all simulations.</li>
+                    <li><strong>Robust Error Handling</strong>: Implement more error handling to gracefully handle issues, such as network interruptions or missing elements on the page.</li>
+                    <li><strong>Command-Line Arguments</strong>: Allow users to specify <code>simulation_count</code>, <code>wait_time</code>, and other configurations via command-line arguments for easier usage.</li>
+                </ul>
+            
+                <h2>Troubleshooting</h2>
+                <ul>
+                    <li><strong>ChromeDriver Issues</strong>: Ensure that your Chrome browser is up to date. <code>webdriver-manager</code> should handle most ChromeDriver version issues, but sometimes mismatches can occur. Updating Chrome typically resolves these.</li>
+                    <li><strong>Permissions Errors</strong>: If you encounter permissions issues when running the script on Windows, try running the command prompt as an Administrator.</li>
+                    <li><strong>System Goes to Sleep</strong>: Make sure to use the <code>caffeinate</code> command on Mac or adjust the power settings on Windows as described above.</li>
+                </ul>
+            
+                <h2>Contributing</h2>
+                <p>Feel free to submit issues or pull requests if you'd like to contribute to improving the script. Make sure to follow proper coding standards and provide thorough explanations for any changes made.</p>
+            </section>
+        </section>
+
+        <!-- Simulation Results Tab -->
+        <section id="results-tab" class="tab-content">
+            <p>This table displays results from Jessica's personal use of this simulation automation script.</p>
+            <table class="">
+                <thead>
+                    <tr class="top-row">
+                        <th class="none" colspan="2"></th>
+                        <th class="center harris-heading" colspan="2">Kamala Harris</th>
+                        <th class="center trump-heading" colspan="2">Donald Trump</th>
+                        <th class="center tie-heading" colspan="2">Ties</th>
+                    </tr>
+                    <tr class="bottom-row">
+                        <th id="col-date" class="left">Date</th>
+                        <th id="col-simulations" class="center">Simulations</th>
+                        <th id="col-dem-wins" class="harris-heading center">Wins</th>
+                        <th id="col-dem-percent" class="harris-heading center">%</th>
+                        <th id="col-rep-wins" class="trump-heading center">Wins</th>
+                        <th id="col-rep-percent" class="trump-heading center">%</th>
+                        <th id="col-tie-totals" class="tie-heading center">Ties</th>
+                        <th id="col-tie-percent" class="tie-heading center">%</th>
+                    </tr>
+                </thead>
+                <tbody id="simulation-results">
+                    <tr class="dem-win">
+                        <td class="left">October 24, 2024</td>
+                        <td class="center">100</td>
+                        <td class="center dem-win">51</td>
+                        <td class="center dem-win">51.0%</td>
+                        <td class="center">49</td>
+                        <td class="center">49.0%</td>
+                        <td class="center">0</td>
+                        <td class="center">0.0%</td>
+                    </tr>
+                    <tr class="rep-win">
+                        <td class="left">October 24, 2024</td>
+                        <td class="center">100</td>
+                        <td class="center">48</td>
+                        <td class="center">48.0%</td>
+                        <td class="center rep-win">52</td>
+                        <td class="center rep-win">52.0%</td>
+                        <td class="center">0</td>
+                        <td class="center">0.0%</td>
+                    </tr>
+                    <tr class="rep-win">
+                        <td class="left">October 24, 2024</td>
+                        <td class="center">100</td>
+                        <td class="center">46</td>
+                        <td class="center">46.0%</td>
+                        <td class="center rep-win">54</td>
+                        <td class="center rep-win">54.0%</td>
+                        <td class="center">0</td>
+                        <td class="center">0.0%</td>
+                    </tr>
+                    <tr class="rep-win">
+                        <td class="left">October 23, 2024</td>
+                        <td class="center">10</td>
+                        <td class="center">4</td>
+                        <td class="center">40.0%</td>
+                        <td class="center rep-win">6</td>
+                        <td class="center rep-win">60.0%</td>
+                        <td class="center">0</td>
+                        <td class="center">0.0%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
+    
     <footer>
         <div class="footer-inner">
             <p>Copyright &copy; 2024 &ndash; Jessica Felts</p>
         </div>
     </footer>
+
+    <script src="./main.js"></script>
 </body>
 </html>
