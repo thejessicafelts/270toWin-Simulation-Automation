@@ -1,5 +1,6 @@
 set,sim,winner,az,ga,mi,nv,nc,pa,wi
 
+
 6,1,trump,harris,trump,trump,harris,trump,trump,harris
 6,2,trump,trump,harris,harris,trump,trump,harris,trump
 6,3,harris,trump,harris,harris,harris,trump,harris,trump
