@@ -11,7 +11,7 @@ set,sim,winner,az,ga,mi,nv,nc,pa,wi
 5,9,harris,trump,harris,harris,harris,harris,harris,harris
 5,10,trump,trump,trump,trump,trump,trump,trump,trump
 
-4,1,trump,undecided,trump,undecided,undecided,trump,undecided,undecided
+4,1,trump,trump,trump,trump,trump,trump,trump,trump
 
 3,1,harris,harris,harris,harris,harris,harris,harris,harris
 3,2,harris,trump,trump,harris,harris,harris,harris,harris
