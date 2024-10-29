@@ -204,6 +204,11 @@ table tbody tr.rep-win td.rep-win {
     font-weight: bold;
 }
 
+table tbody tr.dem-rep-tie td.dem-rep-tie {
+    background: #c8c8c8;
+    font-weight: bold;
+}
+
 table thead tr th.tie-heading {
     background: #c8c8c8;
     color: black;
