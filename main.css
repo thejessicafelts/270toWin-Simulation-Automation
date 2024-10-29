@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     font-family: sans-serif;
     margin: 0;
@@ -9,7 +10,11 @@
     font-size: 16px;
 }
 
-main, .banner-inner, .header-inner, .footer-inner {
+/* Layout Containers */
+main, 
+.banner-inner, 
+.header-inner, 
+.footer-inner {
     max-width: 1000px;
     margin: 0 auto;    
 }
@@ -43,6 +48,131 @@ main {
     padding: 0 0 50px 0;
 }
 
+/* Tab Container Styles */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.tab-button.active {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Tab Content Styles */
+.tab-content {
+    display: none;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+#about-tab,
+#results-tab,
+#code-tab {
+    margin: 20px auto;
+    max-width: 1000px;
+    line-height: 1.6;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Heading Styles for README */
+#readme h1, #readme h2, #readme h3,
+#about-tab h1, #about-tab h2, #about-tab h3,
+#results-tab h1, #results-tab h2, #results-tab h3,
+#code-tab h1, #code-tab h2, #code-tab h3 {
+    color: #333;
+}
+
+#readme h1, #about-tab h1, #results-tab h1, #code-tab h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#readme h2, #about-tab h2, #results-tab h2, #code-tab h2 {
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+}
+
+#readme h3, #about-tab h3, #results-tab h3, #code-tab h3 {
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+#readme {
+    background: #eeeeee;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+/* Text and Link Styling for Tab Content */
+.tab-content p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.tab-content a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+.tab-content a:hover {
+    text-decoration: underline;
+}
+
+/* List Styles in Tab Content */
+.tab-content ul, .tab-content ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.tab-content ul li, .tab-content ol li {
+    margin-bottom: 5px;
+}
+
+/* Code Block and Inline Code Styling */
+/* pre {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    overflow-x: auto;
+    margin-bottom: 20px;
+} */
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2px 4px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+/* Additional Spacing for Readability */
+.tab-content ul, .tab-content ol, .tab-content p {
+    margin-top: 10px;
+}
+
+/* Table Styling */
 table {
     margin: 0 auto;
 }
@@ -99,13 +229,14 @@ table thead tr th.left,
 table tbody tr td.left {
     text-align: left;
 }
+
 table thead tr th.center,
 table tbody tr td.center {
     text-align: center;
 }
 
 table th#col-date {
-    width: 175px;
+    width: 225px;
 }
 
 table th#col-simulations {
@@ -118,125 +249,124 @@ table th#col-rep-wins,
 table th#col-rep-percent,
 table th#col-tie-totals,
 table th#col-tie-percent {
-    width: 100px;
+    width: 125px;
 }
 
-/* Tab Container */
-.tab-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
+p.tab-description {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
 }
 
-.tab-button {
-    padding: 10px 20px;
-    margin: 0 5px;
-    border: none;
-    background-color: #ddd;
-    cursor: pointer;
-    font-size: 1rem;
+#code-tab {
+    position: relative;
 }
 
-.tab-button.active {
-    background-color: #333;
+/* Code Block Container */
+.code-block {
+    background: #222;
     color: #fff;
+    position: relative;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.tab-content {
-    display: none;
-    padding: 20px;
-    margin-top: 20px;
+/* Code Block Header */
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 8px 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #222;
 }
 
-.tab-content.active {
-    display: block;
-}
-/* README Section Styling */
-#readme {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    line-height: 1.6;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+/* Language Title in Header */
+.code-language {
+    font-size: 1rem;
+    color: #222;
 }
 
-/* Heading Styles */
-#readme h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #333;
-    text-align: center;
+/* Copy Button in Header */
+.copy-button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-#readme h2 {
-    font-size: 1.5em;
-    margin-top: 20px;
-    margin-bottom: 10px;
+.copy-button:hover {
+    background-color: #555;
+}
+
+/* Styling the Code Content */
+pre {
+    border: none;
+    margin: 0px;
+    padding: 15px;
+    font-size: 1rem;
+    overflow-x: auto;
+}
+
+/* Styling for README code blocks */
+
+#readme .code-block {
+    background: #f4f4f4;
+    color: #444;
+    margin: 30px 0;
+}
+
+#readme pre {
+    color: #000;
+}
+
+/* Code Block Header */
+#readme .code-header {
+    background-color: #444;
+    color: #f4f4f4;
+}
+
+/* Language Title in Header */
+#readme .code-language {
+    color: #f4f4f4;
+}
+
+/* Copy Button in Header */
+#readme .copy-button {
+    background-color: #f4f4f4;
     color: #444;
 }
 
-#readme h3 {
-    font-size: 1.2em;
-    margin-top: 15px;
-    color: #555;
+#readme .copy-button:hover {
+    background-color: #444;
 }
 
-/* Paragraph and Link Styles */
-#readme p {
-    color: #555;
-    margin-bottom: 10px;
-}
-
-#readme a {
-    color: #007acc;
-    text-decoration: none;
-}
-
-#readme a:hover {
-    text-decoration: underline;
-}
-
-/* List Styles */
-#readme ul, #readme ol {
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
-
-#readme ul li, #readme ol li {
-    margin-bottom: 5px;
-}
-
-/* Code Block and Inline Code */
-#readme pre {
-    background-color: #f4f4f4;
-    padding: 10px;
+#readme p code,
+#readme strong code,
+#readme ul code {
+    background: #444;
+    color: #fff;
     border-radius: 5px;
-    border: 1px solid #ddd;
-    overflow-x: auto;
-    margin-bottom: 20px;
-    font-size: 0.95em;
+    font-size: 1rem;
+    padding: 5px 10px;
+    font-weight: normal;
 }
 
-#readme code {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #f4f4f4;
-    padding: 2px 4px;
-    border-radius: 3px;
-    color: #c7254e;
-}
+/* Output Example Code */
 
-/* Additional Spacing for Readability */
-#readme ul, #readme ol, #readme pre, #readme p {
-    margin-top: 10px;
-}
-#results-tab {
-    margin: 40px 0;
-}
-
-#results-tab p {
-    padding: 0 30px 40px 30px;
-    text-align: center;
+#readme pre.output-example {
+    background: #f4f4f4;
+    color: #444;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 15px;
+    margin: 20px 0;
 }
