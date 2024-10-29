@@ -16,7 +16,7 @@ wins_harris = 0
 wins_trump = 0
 wins_tied = 0
 wait_time = 7
-simulation_count = 10
+simulation_count = 5
 html_file_path = 'index.html'  # Path to your HTML file
 
 # Initialize the WebDriver (Chrome)
@@ -93,19 +93,20 @@ try:
         tie_win_row_class = "tie-win"
 
     # Format the data
-    today = datetime.now().strftime('%B %d, %Y')
+    current_date = datetime.now().strftime('%B %d, %Y')
+    current_time = datetime.now().strftime('%H:%M')
     new_row = f"""
-            <tr class="{row_class}">
-                <td class="left">{today}</td>
-                <td class="center">{simulation_count}</td>
-                <td class="center {dem_win_row_class}">{wins_harris}</td>
-                <td class="center {dem_win_row_class}">{wins_harris_percentage:.1f}%</td>
-                <td class="center {rep_win_row_class}">{wins_trump}</td>
-                <td class="center {rep_win_row_class}">{wins_trump_percentage:.1f}%</td>
-                <td class="center {tie_win_row_class}">{wins_tied}</td>
-                <td class="center {tie_win_row_class}">{wins_tied_percentage:.1f}%</td>
-            </tr>
-    """
+                <tr class="{row_class}">
+                    <td class="left">{current_date} &mdash; {current_time} EDT</td>
+                    <td class="center">{simulation_count}</td>
+                    <td class="center {dem_win_row_class}">{wins_harris}</td>
+                    <td class="center {dem_win_row_class}">{wins_harris_percentage:.1f}%</td>
+                    <td class="center {rep_win_row_class}">{wins_trump}</td>
+                    <td class="center {rep_win_row_class}">{wins_trump_percentage:.1f}%</td>
+                    <td class="center {tie_win_row_class}">{wins_tied}</td>
+                    <td class="center {tie_win_row_class}">{wins_tied_percentage:.1f}%</td>
+                </tr>
+                """
 
     # Append the new row as the first row in the HTML file
     with open(html_file_path, 'r') as file:
@@ -122,13 +123,28 @@ try:
     with open(html_file_path, 'w') as file:
         file.writelines(html_content)
 
+    # Path to the repository (assuming current directory)
+    repo = git.Repo('.')
 
-    # Automatically commit the change
-    # repo = git.Repo('.')
-    # repo.git.add(html_file_path)
-    # repo.git.commit(m=f"Add simulation results for {today}")
+    # Set the remote URL if it doesn’t exist or isn’t named correctly
+    if "origin" not in [remote.name for remote in repo.remotes]:
+        repo.create_remote('origin', 'https://github.com/thejessicafelts/270toWin-Simulation-Automation')
+    else:
+        repo.remotes.origin.set_url('https://github.com/thejessicafelts/270toWin-Simulation-Automation')
 
-    # print("HTML file updated and changes committed successfully.")
+    # Stage the HTML file
+    repo.git.add(html_file_path)
+
+    # Commit with a timestamped message
+    today = datetime.now().strftime('%B %d, %Y, %H:%M')
+    repo.git.commit(m=f"Added Simulation Results for {today} EDT")
+
+    # Push the committed changes to the remote repository (e.g., main branch)
+    try:
+        repo.git.push("origin", "main")
+        print("Changes committed and pushed successfully.")
+    except Exception as e:
+        print(f"An error occurred while pushing the changes: {e}")
 
 except Exception as e:
     print(f"An error occurred: {e}")
