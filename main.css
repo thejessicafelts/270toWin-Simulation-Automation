@@ -241,11 +241,11 @@ table tbody tr td.center {
 }
 
 table th#col-date {
-    width: 225px;
+    width: 325px;
 }
 
 table th#col-simulations {
-    width: 125px;
+    width: 100px;
 }
 
 table th#col-dem-wins,
@@ -254,7 +254,7 @@ table th#col-rep-wins,
 table th#col-rep-percent,
 table th#col-tie-totals,
 table th#col-tie-percent {
-    width: 125px;
+    width: 110px;
 }
 
 p.tab-description {
