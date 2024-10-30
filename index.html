@@ -141,19 +141,19 @@
             
                 <h3>Example Output:</h3>
                 <pre class="output-example"><code class="">--------------------------------------------------------------------------------
-Simulation 1: Harris Wins.
+Simulation 1: democrat Wins.
 ----------
-Harris: 320, Trump: 218
-Harris has won 100.00% of simulations. (1 out of 1)
+democrat: 320, republican: 218
+democrat has won 100.00% of simulations. (1 out of 1)
 --------------------------------------------------------------------------------
-Simulation 2: Trump Wins.
+Simulation 2: republican Wins.
 ----------
-Harris: 249, Trump: 289
-Trump has won 50.00% of simulations. (1 out of 2)
+democrat: 249, republican: 289
+republican has won 50.00% of simulations. (1 out of 2)
 --------------------------------------------------------------------------------
-Simulation 3: Harris and Trump have Tied.
+Simulation 3: democrat and republican have Tied.
 ----------
-Harris: 269, Trump: 269
+democrat: 269, republican: 269
 50.00% of Simulations (1 of 3) have resulted in a Tie.
 --------------------------------------------------------------------------------</code></pre>
     
@@ -161,12 +161,12 @@ Harris: 269, Trump: 269
                 <ol>
                     <li><strong>Initialization</strong>: The script sets up the WebDriver using ChromeDriver and <code>webdriver-manager</code>. The simulation speed is set by finding and clicking the appropriate button on the website.</li>
                     <li><strong>Simulation Loop</strong>: The script runs the simulation the specified number of times. After each simulation run, it waits for the results to appear and retrieves them using the designated HTML element IDs.</li>
-                    <li><strong>Result Calculation &amp; Display</strong>: The script calculates and prints the win percentage for Harris and Trump, as well as the number of ties, after each simulation run.</li>
+                    <li><strong>Result Calculation &amp; Display</strong>: The script calculates and prints the win percentage for democrat and republican, as well as the number of ties, after each simulation run.</li>
                 </ol>
             
                 <h2>Future Enhancements</h2>
                 <ul>
-                    <li><strong>Final Summary</strong>: Add a final summary that prints the overall win percentages for Harris, Trump, and ties at the end of all simulations.</li>
+                    <li><strong>Final Summary</strong>: Add a final summary that prints the overall win percentages for democrat, republican, and ties at the end of all simulations.</li>
                     <li><strong>Robust Error Handling</strong>: Implement more error handling to gracefully handle issues, such as network interruptions or missing elements on the page.</li>
                     <li><strong>Command-Line Arguments</strong>: Allow users to specify <code>simulation_count</code>, <code>wait_time</code>, and other configurations via command-line arguments for easier usage.</li>
                 </ul>
@@ -190,17 +190,17 @@ Harris: 269, Trump: 269
                 <thead>
                     <tr class="top-row">
                         <th class="none" colspan="2"></th>
-                        <th class="center harris-heading" colspan="2">Kamala Harris</th>
-                        <th class="center trump-heading" colspan="2">Donald Trump</th>
+                        <th class="center democrat-heading" colspan="2">Democrat</th>
+                        <th class="center republican-heading" colspan="2">Republican</th>
                         <th class="center tie-heading" colspan="2">Ties</th>
                     </tr>
                     <tr class="bottom-row">
                         <th id="col-date" class="left">Date</th>
                         <th id="col-simulations" class="center">Simulations</th>
-                        <th id="col-dem-wins" class="harris-heading center">Wins</th>
-                        <th id="col-dem-percent" class="harris-heading center">%</th>
-                        <th id="col-rep-wins" class="trump-heading center">Wins</th>
-                        <th id="col-rep-percent" class="trump-heading center">%</th>
+                        <th id="col-dem-wins" class="democrat-heading center">Wins</th>
+                        <th id="col-dem-percent" class="democrat-heading center">%</th>
+                        <th id="col-rep-wins" class="republican-heading center">Wins</th>
+                        <th id="col-rep-percent" class="republican-heading center">%</th>
                         <th id="col-tie-totals" class="tie-heading center">Ties</th>
                         <th id="col-tie-percent" class="tie-heading center">%</th>
                     </tr>
@@ -584,10 +584,10 @@ Harris: 269, Trump: 269
     url = 'https://www.270towin.com/2024-simulation/'
     sim_speed_id = 'sim_speed_4'
     run_simulation = 'run-simulation'
-    results_harris = 'dem_ev'
-    results_trump = 'rep_ev'
-    wins_harris = 0
-    wins_trump = 0
+    results_democrat = 'dem_ev'
+    results_republican = 'rep_ev'
+    wins_democrat = 0
+    wins_republican = 0
     wins_tied = 0
     wait_time = 6
     simulation_count = 100
@@ -616,50 +616,50 @@ Harris: 269, Trump: 269
             time.sleep(wait_time)
 
             # Recording the final Values
-            results_harris_value = driver.find_element(By.ID, results_harris).text
-            results_trump_value = driver.find_element(By.ID, results_trump).text
+            results_democrat_value = driver.find_element(By.ID, results_democrat).text
+            results_republican_value = driver.find_element(By.ID, results_republican).text
 
             # Convert Results to Numbers
             try:
-                results_harris_value = int(results_harris_value.replace('',''))
-                results_trump_value = int(results_trump_value.replace('',''))
+                results_democrat_value = int(results_democrat_value.replace('',''))
+                results_republican_value = int(results_republican_value.replace('',''))
             except ValueError:
-                print(f"Count not convert values to numbers: '{results_harris_value}', '{results_trump_value}'")
+                print(f"Count not convert values to numbers: '{results_democrat_value}', '{results_republican_value}'")
                 continue
 
             # Update the Win Record
-            if results_harris_value > results_trump_value:
-                wins_harris += 1
-            elif results_harris_value < results_trump_value:
-                wins_trump += 1
+            if results_democrat_value > results_republican_value:
+                wins_democrat += 1
+            elif results_democrat_value < results_republican_value:
+                wins_republican += 1
             else:
                 wins_tied += 1
 
             # Calculate the Win Percentage
-            total_runs = wins_harris + wins_trump + wins_tied
-            wins_harris_percentage = (wins_harris / total_runs) * 100 if total_runs > 0 else 0
-            wins_trump_percentage = (wins_trump / total_runs) * 100 if total_runs > 0 else 0
+            total_runs = wins_democrat + wins_republican + wins_tied
+            wins_democrat_percentage = (wins_democrat / total_runs) * 100 if total_runs > 0 else 0
+            wins_republican_percentage = (wins_republican / total_runs) * 100 if total_runs > 0 else 0
             wins_tied_percentage = (wins_tied / total_runs) * 100 if total_runs > 0 else 0
 
             # Print the Results, Update Win Record
-            if results_harris_value > results_trump_value:
+            if results_democrat_value > results_republican_value:
                 print("-" * 80)
-                print(f"Simluation {i + 1}: Harris Wins.")
+                print(f"Simluation {i + 1}: democrat Wins.")
                 print("-" * 10)
-                print(f"Harris: {results_harris_value}, Trump: {results_trump_value}")
-                print(f"Harris has won {wins_harris_percentage:.2f}% of simulations. ({wins_harris} out of {total_runs})")
-            elif results_harris_value < results_trump_value:
+                print(f"democrat: {results_democrat_value}, republican: {results_republican_value}")
+                print(f"democrat has won {wins_democrat_percentage:.2f}% of simulations. ({wins_democrat} out of {total_runs})")
+            elif results_democrat_value < results_republican_value:
                 print("-" * 80)
-                print(f"Simluation {i + 1}: Trump Wins.")
+                print(f"Simluation {i + 1}: republican Wins.")
                 print("-" * 10)
-                print(f"Harris: {results_harris_value}, Trump: {results_trump_value}")
-                print(f"Trump has won {wins_trump_percentage:.2f}% of simulations. ({wins_trump} out of {total_runs})")
+                print(f"democrat: {results_democrat_value}, republican: {results_republican_value}")
+                print(f"republican has won {wins_republican_percentage:.2f}% of simulations. ({wins_republican} out of {total_runs})")
             else:
                 print("-" * 80)
-                print(f"Simluation {i + 1}: Harris and Trump have Tied.")
+                print(f"Simluation {i + 1}: democrat and republican have Tied.")
                 print("-" * 10)
-                print(f"Harris: {results_harris_value}, Trump: {results_trump_value}")
-                print(f"{wins_trump_percentage:.2f}% of Simulations ({wins_tied} of {total_runs}) have resulted in a Tie.")
+                print(f"democrat: {results_democrat_value}, republican: {results_republican_value}")
+                print(f"{wins_republican_percentage:.2f}% of Simulations ({wins_tied} of {total_runs}) have resulted in a Tie.")
 
         # Keep the browser open after the script finishes
         print(f"{i + 1} Simluations have been completed.")

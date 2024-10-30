@@ -184,7 +184,7 @@ table, th, td {
     border-collapse: collapse;
 }
 
-table thead tr th.harris-heading {
+table thead tr th.democrat-heading {
     background: #244999;
     color: white;
     font-weight: bold;
@@ -195,7 +195,7 @@ table tbody tr.dem-win td.dem-win {
     font-weight: bold;
 }
 
-table thead tr th.trump-heading {
+table thead tr th.republican-heading {
     background: #d22532;
     color: white;
     font-weight: bold;
