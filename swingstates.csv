@@ -1,11 +1,10 @@
 set,sim,winner,az,ga,mi,nv,nc,pa,wi
 
-19,5,republican,republican,republican,republican,democrat,republican,republican,republican
-19,4,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
-19,3,republican,democrat,republican,democrat,republican,republican,republican,democrat
-19,2,republican,democrat,republican,republican,republican,republican,republican,republican
 19,1,republican,republican,republican,democrat,democrat,republican,democrat,republican
-
+19,2,republican,democrat,republican,republican,republican,republican,republican,republican
+19,3,republican,democrat,republican,democrat,republican,republican,republican,democrat
+19,4,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
+19,5,republican,republican,republican,republican,democrat,republican,republican,republican
 
 18,1,republican,republican,republican,republican,republican,republican,republican,republican
 18,2,democrat,republican,democrat,democrat,democrat,democrat,democrat,democrat
@@ -132,3 +131,13 @@ set,sim,winner,az,ga,mi,nv,nc,pa,wi
 1,8,republican,republican,republican,republican,republican,republican,republican,republican
 1,9,democrat,democrat,republican,democrat,republican,democrat,democrat,democrat
 1,10,democrat,democrat,democrat,republican,democrat,republican,republican,democrat
+20,1,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
+
+20,2,democrat,democrat,republican,democrat,democrat,republican,democrat,democrat
+
+20,3,republican,republican,republican,republican,republican,republican,republican,republican
+
+20,4,republican,republican,republican,democrat,democrat,democrat,republican,republican
+
+20,5,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
+
