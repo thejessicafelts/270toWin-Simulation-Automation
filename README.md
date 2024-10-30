@@ -69,19 +69,19 @@ Execute the script using:
 ### Example Output
 ```plaintext
 --------------------------------------------------------------------------------
-Simulation 1: Harris Wins.
+Simulation 1: Democrats Win.
 ----------
-Harris: 320, Trump: 218
-Harris has won 100.00% of simulations. (1 out of 1)
+Democrats: 320, Republicans: 218
+Democrats have won 100.00% of simulations. (1 out of 1)
 --------------------------------------------------------------------------------
-Simulation 2: Trump Wins.
+Simulation 2: Republicans Win.
 ----------
-Harris: 249, Trump: 289
-Trump has won 50.00% of simulations. (1 out of 2)
+Democrats: 249, Republicans: 289
+Republicans have won 50.00% of simulations. (1 out of 2)
 --------------------------------------------------------------------------------
-Simulation 3: Harris and Trump have Tied.
+Simulation 3: Democrats and Republicans have Tied.
 ----------
-Harris: 269, Trump: 269
+Democrats: 269, Republicans: 269
 50.00% of Simulations (1 of 3) have resulted in a Tie.
 --------------------------------------------------------------------------------
 ```
@@ -98,11 +98,11 @@ Harris: 269, Trump: 269
    - The results are converted to integers, and the script tracks how many times each candidate wins or if there's a tie.
 
 3. **Result Calculation & Display**:
-   - The script calculates and prints the win percentage for Harris and Trump, as well as the number of ties, after each simulation run.
+   - The script calculates and prints the win percentage for Democrats and Republicans, as well as the number of ties, after each simulation run.
 
 ## Future Enhancements
 
-- **Final Summary**: Add a final summary that prints the overall win percentages for Harris, Trump, and ties at the end of all simulations.
+- **Final Summary**: Add a final summary that prints the overall win percentages for Democrats, Republicans, and ties at the end of all simulations.
 - **Robust Error Handling**: Implement more error handling to gracefully handle issues, such as network interruptions or missing elements on the page.
 - **Command-Line Arguments**: Allow users to specify `simulation_count`, `wait_time`, and other configurations via command-line arguments for easier usage.
 
