@@ -1,28 +1,34 @@
 set,sim,winner,az,ga,mi,nv,nc,pa,wi
 
-15,5,republican,republican,republican,democrat,democrat,republican,republican,democrat
-15,4,republican,republican,republican,republican,republican,republican,republican,republican
-15,3,democrat,republican,republican,democrat,republican,republican,democrat,democrat
-15,2,republican,republican,republican,republican,republican,republican,republican,republican
+16,1,republican,republican,republican,republican,republican,republican,republican,republican
+16,2,democrat,republican,democrat,democrat,democrat,democrat,democrat,democrat
+16,3,democrat,republican,democrat,democrat,republican,democrat,republican,democrat
+16,4,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
+16,5,republican,democrat,republican,republican,republican,republican,republican,republican
+
 15,1,republican,republican,republican,republican,republican,republican,democrat,democrat
+15,2,republican,republican,republican,republican,republican,republican,republican,republican
+15,3,democrat,republican,republican,democrat,republican,republican,democrat,democrat
+15,4,republican,republican,republican,republican,republican,republican,republican,republican
+15,5,republican,republican,republican,democrat,democrat,republican,republican,democrat
 
-14,5,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
-14,4,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
-14,3,republican,republican,republican,republican,republican,republican,republican,democrat
-14,2,republican,republican,republican,republican,republican,republican,republican,republican
 14,1,democrat,republican,republican,democrat,republican,republican,democrat,democrat
+14,2,republican,republican,republican,republican,republican,republican,republican,republican
+14,3,republican,republican,republican,republican,republican,republican,republican,democrat
+14,4,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
+14,5,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
 
-13,5,republican,democrat,democrat,republican,republican,republican,republican,republican
-13,4,democrat,republican,republican,democrat,democrat,democrat,republican,democrat
-13,3,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
-13,2,republican,republican,republican,democrat,republican,republican,republican,republican
 13,1,democrat,republican,republican,democrat,democrat,republican,democrat,democrat
+13,2,republican,republican,republican,democrat,republican,republican,republican,republican
+13,3,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
+13,4,democrat,republican,republican,democrat,democrat,democrat,republican,democrat
+13,5,republican,democrat,democrat,republican,republican,republican,republican,republican
 
-12,5,republican,republican,republican,republican,republican,republican,republican,republican
-12,4,democrat,democrat,republican,democrat,democrat,democrat,democrat,democrat
-12,3,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
-12,2,democrat,republican,republican,democrat,democrat,democrat,democrat,democrat
 12,1,republican,democrat,republican,republican,republican,republican,republican,republican
+12,2,democrat,republican,republican,democrat,democrat,democrat,democrat,democrat
+12,3,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
+12,4,democrat,democrat,republican,democrat,democrat,democrat,democrat,democrat
+12,5,republican,republican,republican,republican,republican,republican,republican,republican
 
 11,1,republican,republican,republican,republican,republican,republican,republican,republican
 11,2,republican,republican,republican,republican,democrat,republican,republican,republican
