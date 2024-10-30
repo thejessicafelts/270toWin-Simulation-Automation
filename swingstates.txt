@@ -1,5 +1,16 @@
 set,sim,winner,az,ga,mi,nv,nc,pa,wi
 
+9,1,harris,harris,harris,harris,harris,harris,harris,harris
+9,2,harris,trump,trump,harris,trump,harris,harris,harris
+9,3,trump,trump,trump,trump,trump,trump,harris,trump
+9,4,trump,trump,trump,trump,trump,trump,trump,trump
+9,5,harris,harris,harris,harris,harris,harris,harris,harris
+9,6,harris,trump,harris,harris,trump,harris,harris,trump
+9,7,trump,trump,trump,harris,trump,harris,trump,trump
+9,8,trump,trump,trump,trump,trump,trump,trump,trump
+9,9,trump,trump,trump,harris,trump,trump,trump,trump
+9,10,harris,harris,trump,harris,harris,trump,trump,harris
+
 
 
 8,1,harris,harris,harris,harris,harris,harris,harris,harris
