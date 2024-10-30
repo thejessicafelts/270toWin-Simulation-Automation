@@ -1,11 +1,20 @@
 set,sim,winner,az,ga,mi,nv,nc,pa,wi
+24,5,republican,republican,republican,democrat,republican,republican,republican,republican
+
+24,4,republican,republican,republican,democrat,republican,republican,republican,democrat
+
+24,3,republican,republican,republican,republican,republican,republican,republican,republican
+
+24,2,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
+
+24,1,republican,republican,republican,republican,republican,republican,republican,republican
+
 
 23,5,republican,republican,republican,republican,republican,democrat,democrat,republican
 23,4,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
 23,3,democrat,democrat,democrat,democrat,democrat,democrat,democrat,democrat
 23,2,republican,republican,republican,democrat,republican,republican,democrat,republican
 23,1,republican,republican,republican,republican,republican,republican,republican,republican
-
 
 22,1,democrat,republican,democrat,democrat,republican,democrat,democrat,democrat
 22,2,democrat,democrat,republican,democrat,democrat,republican,democrat,democrat
