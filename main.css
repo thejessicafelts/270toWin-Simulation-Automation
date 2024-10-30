@@ -207,7 +207,7 @@ table tbody tr.rep-win td.rep-win {
 }
 
 table tbody tr.dem-rep-tie td.dem-rep-tie {
-    background: #c8c8c8;
+    background: #feef97;
     font-weight: bold;
 }
 
@@ -218,7 +218,7 @@ table thead tr th.tie-heading {
 }
 
 table tbody tr.tie-win td.tie-win {
-    background: #ebebeb;
+    background: #feef97;
     font-weight: bold;
 }
 
@@ -244,10 +244,12 @@ table tbody tr td.center {
 
 table th#col-date {
     width: 325px;
+    background-color: #c8c8c8;
 }
 
 table th#col-simulations {
     width: 100px;
+    background-color: #c8c8c8;
 }
 
 table th#col-dem-wins,
@@ -377,4 +379,29 @@ pre {
     font-size: 1rem;
     padding: 15px;
     margin: 20px 0;
+}
+
+
+#swingstates-tab #state-graphs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#swingstates-tab #state-graphs .chart {
+    width: 50%;
+}
+
+#swingstates-tab #state-graphs .chart img {
+    width: 100%;
+}
+
+#results-tab #national-graph .chart {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#results-tab #national-graph .chart img {
+    width: 100%;
 }
