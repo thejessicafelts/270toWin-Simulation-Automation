@@ -85,6 +85,7 @@ main {
 
 #about-tab,
 #results-tab,
+#swingstates-tab,
 #code-tab {
     margin: 20px auto;
     max-width: 1000px;
@@ -97,22 +98,23 @@ main {
 #readme h1, #readme h2, #readme h3,
 #about-tab h1, #about-tab h2, #about-tab h3,
 #results-tab h1, #results-tab h2, #results-tab h3,
+#swingstates-tab h1, #swingstates-tab h2, #swingstates-tab h3,
 #code-tab h1, #code-tab h2, #code-tab h3 {
     color: #333;
 }
 
-#readme h1, #about-tab h1, #results-tab h1, #code-tab h1 {
+#readme h1, #about-tab h1, #results-tab h1, #swingstates-tab h1, #code-tab h1 {
     font-size: 2em;
     margin-bottom: 10px;
     text-align: center;
 }
 
-#readme h2, #about-tab h2, #results-tab h2, #code-tab h2 {
+#readme h2, #about-tab h2, #results-tab h2, #swingstates-tab h2, #code-tab h2 {
     font-size: 1.5em;
     margin: 20px 0 10px;
 }
 
-#readme h3, #about-tab h3, #results-tab h3, #code-tab h3 {
+#readme h3, #about-tab h3, #results-tab h3, #swingstates-tab h3, #code-tab h3 {
     font-size: 1.2em;
     margin-top: 15px;
 }
