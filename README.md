@@ -2,6 +2,8 @@
 
 This project automates the 270toWin 2024 Election Simulation to record simulation outcomes and provide summary statistics. The script uses Selenium to interact with the website and execute multiple simulations, logging each outcome.
 
+![image](270cover.png)
+
 ## Requirements
 
 - Python 3.7+
